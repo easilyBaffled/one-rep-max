@@ -9,7 +9,7 @@ import {
   Area
 } from "recharts";
 import moment from "moment";
-import { DateText } from "./Text";
+import { DateText } from "../Text";
 
 export const Tick = ({
   payload: { value },
@@ -17,7 +17,7 @@ export const Tick = ({
   visibleTicksCount,
   ...rest
 }) => (
-  <DateText as="text" {...console.tap(rest)} dy="16" fill="white">
+  <DateText as="text" {...rest} dy="16" fill="white">
     {value}
   </DateText>
 );

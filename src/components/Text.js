@@ -1,7 +1,11 @@
 import React from "react";
 import moment from "moment";
-
-const Text = ({ as: As = "span", ...props }) => <As {...props} />;
+import ErrorBoundary from "./ErrorBoundary";
+const Text = ({ as: As = "span", ...props }) => (
+  <ErrorBoundary>
+    <As {...props} />
+  </ErrorBoundary>
+);
 export const Number = ({ children = 0.0, ...props }) => (
   <Text {...props}>{children.toFixed(2)}</Text>
 );
