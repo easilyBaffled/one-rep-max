@@ -1,7 +1,7 @@
 describe('Snapshot Testing', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/');
-        cy.contains('YOUR EXERCISES', { timout: 30000 });
+        cy.contains('YOUR EXERCISES', { timout: 100000 });
     });
     it('should display the app', () => {
         cy.get('.App').toMatchImageSnapshot({

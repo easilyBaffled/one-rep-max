@@ -20,6 +20,6 @@ import './commands'
 // require('./commands')
 import 'cypress-plugin-snapshots/commands';
 
-Cypress.on("window:before:load", win => {
-    win.fetch = null;
-});
+// Cypress.on("window:before:load", win => {
+//     win.fetch = null;
+// });
